@@ -3,6 +3,7 @@ version: 0.1
 env:
   parameter-store:
     WEBSITE_BUCKET_NAME: PersonalWebsiteBucket
+    $DISTRIBUTION_NAME: PersonalWebsiteDistribution
 
 phases:
   pre_build:
@@ -15,7 +16,6 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo Just testing $WEBSITE_BUCKET_NAME
       # copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./build s3://$WEBSITE_BUCKET_NAME/
       # set the cache-control headers for service-worker.js to prevent
@@ -23,7 +23,7 @@ phases:
       - >
         aws s3 cp --acl public-read
         --cache-control="max-age=0, no-cache, no-store, must-revalidate"
-        ./build/service-worker.js s3://${WEBSITE_BUCKET_NAME}/
+        ./build/service-worker.js s3://$WEBSITE_BUCKET_NAME/
       # set the cache-control headers for index.html to prevent
       # browser caching
       - >
@@ -33,7 +33,7 @@ phases:
       # invalidate the CloudFront cache for index.html and service-worker.js
       # to force CloudFront to update its edge locations with the new versions
       - >
-        aws cloudfront create-invalidation --distribution-id $WEBSITE_BUCKET_NAME
+        aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_NAME
         --paths /index.html /service-worker.js
 artifacts:
   files:
