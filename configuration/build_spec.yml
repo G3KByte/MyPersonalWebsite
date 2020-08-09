@@ -2,8 +2,8 @@ version: 0.1
 
 env:
   parameter-store:
-    WEBSITE_BUCKET_NAME: PersonalWebsiteBucket
-    DISTRIBUTION_NAME: PersonalWebsiteDistribution
+    WEBSITE_BUCKET_NAME: WebsiteBucket
+    DISTRIBUTION_NAME: WebsiteDistribution
 
 phases:
   pre_build:
