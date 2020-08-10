@@ -20,3 +20,40 @@
 .introTitleName {
     color: #2299EE;
 }
+
+.introButton {
+    color: white;
+    padding: 12px 100px;
+
+    border: 3px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 5px;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    font-size: 2em;
+
+    transition: 0.3s;
+}
+
+.introButton:hover {
+    cursor: pointer;
+
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(34, 153, 238, 0.7);
+}
+
+.introButton:focus {
+    outline: none;
+}
+
+.socialsSection {
+    display: flex;
+}
+
+.socialLink {
+    color: white;
+    font-size: 3em;
+
+    margin: auto 10px;
+}
