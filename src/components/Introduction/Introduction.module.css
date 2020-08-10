@@ -1,0 +1,22 @@
+.introSection {
+    display: flex;
+    height: 100%;
+    background-color: black;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.introTitle {
+    color: white;
+    text-align: center;
+
+    font-family: serif;
+    font-size: 3.25em;
+}
+
+.introTitleName {
+    color: #2299EE;
+}
