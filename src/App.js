@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from './scenes/Home/Home';
 import About from './scenes/About';
@@ -13,12 +13,12 @@ library.add(fab);
 
 function App() {
     return (
-        <React.Fragment>
+        <Router>
             <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/" component={Home}/>
             </Switch>
-        </React.Fragment>
+        </Router>
     );
 }
 
