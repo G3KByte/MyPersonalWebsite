@@ -1,0 +1,33 @@
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.aboutSectionHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 1250px;
+}
+
+.aboutSectionVertical{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 1250px;
+}
+
+.aboutPicture {
+    width: 300px;
+    clip-path: circle(120px at 150px 230px);
+}

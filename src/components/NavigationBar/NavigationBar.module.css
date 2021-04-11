@@ -1,6 +1,14 @@
 .navigationBarContainer {
-    width: 100%;
-    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    background-color: #2299EE;
+    padding: 25px 14px;
+
+    margin: 10px;
+
+    border-right: 4px solid #33CCFF;
+
+    min-height: 30%;
 }

@@ -1,0 +1,20 @@
+.notFoundContainer {
+    display: flex;
+    height: 100%;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundMessage {
+    color: white;
+    text-align: center;
+
+    font-size: 3.25em;
+}
+
+.notFoundError {
+    color: #33CCFF;
+}
